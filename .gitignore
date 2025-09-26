@@ -1,0 +1,58 @@
+﻿# CMake build folders
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.ninja
+*.stamp
+*.yaml
+*.txt
+
+# Visual Studio files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.pdb
+*.ilk
+*.obj
+*.lib
+*.exp
+*.log
+*.idb
+*.ipch
+*.aps
+*.user
+*.opendb
+*.tlog
+*.lastbuildstate
+*.vs/
+
+# CLion
+cmake-build-*/
+
+# Executables
+*.exe
+*.dll
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Resource compiler output
+*.res
+
+# Other IDE files
+.idea/
+.vscode/
+
+# Ignore test and cache folders
+Testing/
+Temporary/
+
