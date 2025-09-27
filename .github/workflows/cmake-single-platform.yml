@@ -1,0 +1,28 @@
+name: CMake on Windows
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  # 自定义CMake构建类型（Release, Debug, RelWithDebInfo等）
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    # 使用Windows最新版本作为运行环境
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configure CMake
+      # 在'build'子目录中配置CMake
+      # Windows上通常使用多配置生成器，如Visual Studio
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Build
+      # 使用指定的配置构建程序
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
